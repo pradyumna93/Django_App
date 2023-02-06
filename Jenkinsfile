@@ -5,12 +5,6 @@ pipeline {
             args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
-    stages {
-        stage('Clean Workspace') {
-            steps {
-                deleteDir()
-            }
-        }
 
     stages{
         stage('Clone repository"'){
