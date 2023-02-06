@@ -7,9 +7,11 @@ pipeline {
                git url: 'https://github.com/pradyumna93/awesome-repo.git'
             }
         }
-        stage("Build image using Dockerfile") {
+        stage("Build Dockerfile") {
             steps {
-                sh "docker build -t pradyumna93/Django_App."
+                script{
+                    sh "docker.build -t pradyumna93/Django_App."
+                }   
             }
         }
         stage("Push code to Docker Hub") {
