@@ -9,9 +9,7 @@ pipeline {
         }
         stage("Build Dockerfile") {
             steps {
-                script{
-                    sh "docker.build -t pradyumna93/Django_App."
-                }   
+                sh 'docker build -t Django_App:$BUILD_NUMBER .'  
             }
         }
         stage("Push code to Docker Hub") {
