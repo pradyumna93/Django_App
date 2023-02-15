@@ -19,7 +19,7 @@ pipeline {
         }
         stage("Push code to Docker Hub") {
             steps {
-                sh "docker login -u pradyumna93 -p India#5488"
+                
                 sh "docker push pradyumna93/Django_App"
             }
         }
